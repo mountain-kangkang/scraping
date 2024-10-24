@@ -1,2 +1,2 @@
 # scraping
-![melon_copy](/for_readme/melon_scrap.gif)
+![melon_copy](/task_1/for_readme/melon_scrap.gif)
