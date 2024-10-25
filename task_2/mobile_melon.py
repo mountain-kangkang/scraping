@@ -23,14 +23,18 @@ url = "https://m2.melon.com/index.htm"
 driver.get(url)
 time.sleep(0.7)
 
+# 멜론 로고 클릭해서 event창 닫기
 driver.find_element(By.CSS_SELECTOR, '.link-logo').click()
 time.sleep(0.6)
 
+# 상단 탭에서 멜론차트 클릭 
 driver.find_element(By.XPATH, '//a[text()="멜론차트"]').click()
 time.sleep(1)
+# 50위 아래 더보기 클릭
 driver.find_element(By.XPATH, '//button[@onclick="hasMore2();"]').click()
 time.sleep(0.3)
 
+# 탑 100 출력(if 문에서 랭킹이 포함되어 있을 경우만 출력해서 다른 탭 데이터는 출력하지 않음)
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
 results = soup.select(".list_item")
